@@ -1,0 +1,65 @@
+{
+  "dataset_rows": 1400,
+  "best_for_likes": "reel",
+  "best_for_comments": "carousel",
+  "post_type_averages": [
+    {
+      "post_type": "reel",
+      "likes": 47210.3,
+      "comments": 2013.8
+    },
+    {
+      "post_type": "carousel",
+      "likes": 41190.9,
+      "comments": 2389.4
+    },
+    {
+      "post_type": "video",
+      "likes": 33856.3,
+      "comments": 2048.7
+    },
+    {
+      "post_type": "image",
+      "likes": 33512.8,
+      "comments": 1740.5
+    }
+  ],
+  "model_comparison": {
+    "likes": {
+      "Linear Regression": {
+        "mae": 5212.102,
+        "r2": 0.848
+      },
+      "Random Forest": {
+        "mae": 4615.615,
+        "r2": 0.869
+      },
+      "Gradient Boosting": {
+        "mae": 4094.492,
+        "r2": 0.891
+      }
+    },
+    "comments": {
+      "Linear Regression": {
+        "mae": 288.772,
+        "r2": 0.842
+      },
+      "Random Forest": {
+        "mae": 284.868,
+        "r2": 0.838
+      },
+      "Gradient Boosting": {
+        "mae": 263.894,
+        "r2": 0.859
+      }
+    },
+    "selected_models": {
+      "likes": "Gradient Boosting",
+      "comments": "Gradient Boosting"
+    },
+    "charts": {
+      "mae": "/artifacts/model_comparison_mae.png",
+      "r2": "/artifacts/model_comparison_r2.png"
+    }
+  }
+}

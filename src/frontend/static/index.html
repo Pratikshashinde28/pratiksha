@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Engagement Analysis</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Instagram Analytics Project</p>
+      <h1>Which posts get more likes and comments?</h1>
+      <p class="lede">
+        Compare three machine learning algorithms and predict the performance of
+        images, reels, videos, and carousels using a clean frontend dashboard.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Try a prediction</h2>
+        <form id="prediction-form">
+          <div class="form-grid">
+            <label>Followers
+              <input type="number" id="followers" value="120000" min="100" required>
+            </label>
+            <label>Post type
+              <select id="post_type">
+                <option value="image">Image</option>
+                <option value="carousel">Carousel</option>
+                <option value="reel" selected>Reel</option>
+                <option value="video">Video</option>
+              </select>
+            </label>
+            <label>Caption length
+              <input type="number" id="caption_length" value="180" min="0" max="500" required>
+            </label>
+            <label>Hashtags count
+              <input type="number" id="hashtags_count" value="8" min="0" max="30" required>
+            </label>
+            <label>Hour posted
+              <input type="number" id="hour_posted" value="20" min="0" max="23" required>
+            </label>
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="is_weekend" checked>
+                Weekend post
+              </label>
+              <label class="toggle">
+                <input type="checkbox" id="sponsorship">
+                Sponsored post
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="submit-button">Predict engagement</button>
+        </form>
+      </div>
+
+      <div class="card result-card">
+        <h2>Prediction result</h2>
+        <div id="result">
+          <p class="muted">Submit the form to see predicted likes and comments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid insights">
+      <div class="card">
+        <h2>Post type insights</h2>
+        <div id="insights-summary" class="muted">Loading insights...</div>
+      </div>
+      <div class="card">
+        <h2>Model comparison</h2>
+        <div id="model-comparison" class="muted">Loading model metrics...</div>
+      </div>
+    </section>
+
+    <section class="grid insights">
+      <div class="card">
+        <h2>Model comparison graph</h2>
+        <div id="comparison-graphs" class="muted">Training charts will appear here.</div>
+      </div>
+      <div class="card">
+        <h2>Engagement charts</h2>
+        <div class="chart-stack">
+          <img src="/artifacts/avg_likes_by_post_type.png" alt="Average likes by post type chart" class="chart-image">
+          <img src="/artifacts/avg_comments_by_post_type.png" alt="Average comments by post type chart" class="chart-image">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
