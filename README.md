@@ -1,3 +1,4 @@
+
 # Instagram Engagement Analysis
 
 This project is a VS Code-friendly Instagram engagement analysis app that predicts what types of posts are likely to get more likes and comments. It includes:
@@ -85,3 +86,5 @@ python -m uvicorn src.api.app:app --reload
 - The dataset is synthetic but designed to reflect realistic social media patterns.
 - Training generates charts and model files inside `artifacts/`.
 - The frontend also shows a summary of which post types usually attract higher likes and comments.
+
+
